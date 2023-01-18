@@ -8,11 +8,13 @@ public class Cesta {
     private boolean estaLlena;
     private boolean estaVacia;
 
+
     public Cesta(int tamano){
         this.cesta = new String[tamano];
         this.siguiente = 0;
         this.estaVacia = true;
         this.estaLlena = false;
+
     }
 
     public synchronized String consumir(){

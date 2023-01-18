@@ -3,9 +3,11 @@ import java.util.logging.Logger;
 
 public class Consumidor extends Thread{
     private Cesta cesta;
+    private String name;
 
-    public Consumidor(Cesta b){
+    public Consumidor(Cesta b, String name){
         this.cesta = b;
+        this.name = name;
 
     }
 
