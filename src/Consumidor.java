@@ -6,7 +6,6 @@ public class Consumidor extends Thread{
     private String name;
 
     public Consumidor( String name){
-
         this.name = name;
 
     }
@@ -17,8 +16,8 @@ public class Consumidor extends Thread{
                 String valor = this.cesta.consumir();
                 System.out.println(name +" ha recogido el producto"+ valor+ "del huerto");
                 sleep((int) (Math.random() * 400));
-            } catch (InterruptedException ex) {
-                Logger.getLogger(Consumidor.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
             }
 
         }

@@ -17,12 +17,13 @@ public class Cesta {
 
     }
 
+
     public synchronized String consumir(){
         while (this.estaVacia){
             try{
                 wait();
-            }catch(InterruptedException ex){
-                Logger.getLogger(Cesta.class.getName()).log(Level.SEVERE, null, ex);
+            }catch(InterruptedException e){
+                throw new RuntimeException(e);
             }
         }
         siguiente--;
