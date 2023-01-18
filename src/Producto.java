@@ -19,7 +19,7 @@ public class Producto extends Thread{
      int a = (int)(Math.random()*vegetable.length);
 
 
-     System.out.println( vegetable[a] + " es despositado en la cesta");
+     System.out.println(name + " ha depositado " + vegetable[a] + " en la cesta");
      sleep((int) (Math.random()*4000));
     } catch (InterruptedException e) {
      throw new RuntimeException(e);
